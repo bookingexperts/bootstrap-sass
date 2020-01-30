@@ -22,7 +22,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: $line-height-computed;
-  font-size: ($font-size-base * 1.5);
+  font-size: calc(#{$font-size-base} * 1.5);
   line-height: inherit;
   color: $legend-color;
   border: 0;
@@ -381,7 +381,7 @@ textarea.form-control {
 
   // Ensure icons don't overlap text
   .form-control {
-    padding-right: ($input-height-base * 1.25);
+    padding-right: calc(#{$input-height-base} * 1.25);
   }
 }
 // Feedback icon (requires .glyphicon classes)
