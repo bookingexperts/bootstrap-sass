@@ -226,7 +226,7 @@ $legend-border-color:            #e5e5e5 !default;
 //** Background color for textual input addons
 $input-group-addon-bg:           $gray-lighter !default;
 //** Border color for textual input addons
-$input-group-addon-border-color: $input-border !default;
+$input-group-addon-border-color: hsl(var(--input-border-h), var(--input-border-s), var(--input-border-l)) !default;
 
 //** Disabled cursor for form controls and buttons.
 $cursor-disabled:                not-allowed !default;
