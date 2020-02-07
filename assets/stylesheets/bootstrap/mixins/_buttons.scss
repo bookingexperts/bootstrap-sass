@@ -5,25 +5,25 @@
 
 @mixin button-variant($color, $background, $border) {
   color: $color;
-  background-color: $background;
+  background-color: hsl($background...);
   border-color: $border;
 
   &:focus,
   &.focus {
     color: $color;
-    background-color: darken($background, 10%);
+    background-color: hsl(nth($background, 1), nth($background, 2), calc(nth($background, 3) + 10%));
     border-color: darken($border, 25%);
   }
   &:hover {
     color: $color;
-    background-color: darken($background, 10%);
+    background-color: hsl(nth($background, 1), nth($background, 2), calc(nth($background, 3) + 10%));
     border-color: darken($border, 12%);
   }
   &:active,
   &.active,
   .open > &.dropdown-toggle {
     color: $color;
-    background-color: darken($background, 10%);
+    background-color: hsl(nth($background, 1), nth($background, 2), calc(nth($background, 3) + 10%));
     background-image: none;
     border-color: darken($border, 12%);
 
@@ -31,7 +31,7 @@
     &:focus,
     &.focus {
       color: $color;
-      background-color: darken($background, 17%);
+      background-color: hsl(nth($background, 1), nth($background, 2), calc(nth($background, 3) + 17%));
       border-color: darken($border, 25%);
     }
   }
@@ -41,13 +41,13 @@
     &:hover,
     &:focus,
     &.focus {
-      background-color: $background;
+      background-color: hsl($background...);
       border-color: $border;
     }
   }
 
   .badge {
-    color: $background;
+    color: hsl($background...);
     background-color: $color;
   }
 }
